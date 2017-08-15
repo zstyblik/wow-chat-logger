@@ -3,6 +3,7 @@ using Styx.Common;
 using Styx.CommonBot;
 using Styx.Helpers;
 using Styx.Plugins;
+using Styx.WoWInternals;
 
 namespace ChatLogger
 {
@@ -11,6 +12,7 @@ namespace ChatLogger
         public override string Author { get { return "zstyblik"; } }
         public override string Name { get { return "ChatLogger"; } }
         public override void OnButtonPress() { }
+        public override void Pulse() { }
         public override Version Version { get { return new Version(0, 1); } }
         public override bool WantButton { get { return false; } }
 
