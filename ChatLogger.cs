@@ -1,3 +1,9 @@
+using Styx;
+using Styx.Common;
+using Styx.CommonBot;
+using Styx.Helpers;
+using Styx.Plugins;
+
 namespace ChatLogger
 {
     public class ChatLogger : HBPlugin
