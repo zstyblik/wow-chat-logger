@@ -4,6 +4,8 @@ using Styx.CommonBot;
 using Styx.Helpers;
 using Styx.Plugins;
 using Styx.WoWInternals;
+using System;
+using System.Windows.Media;
 
 namespace ChatLogger
 {
