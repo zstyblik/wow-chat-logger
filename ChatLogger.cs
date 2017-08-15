@@ -48,7 +48,7 @@ namespace ChatLogger
         private void BNetWhisper(object sender, LuaEventArgs args)
         {
             if (((string)args.Args[0]).StartsWith("OQ,0Z,")) {
-                return
+                return;
             }
             //string friendname = Styx.WoWInternals.Lua.GetReturnVal<string>(string.Format("return BNGetFriendInfoByID({0})", author), 4);
             //string chat_from = string.Format("({0}){1}", author,friendname.ToString());
