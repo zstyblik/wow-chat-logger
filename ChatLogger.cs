@@ -19,8 +19,8 @@ namespace ChatLogger
         public override bool WantButton { get { return false; } }
 
         public override void OnEnable() {
-            Chat.Say += Chat_Say;
-            Chat.Yell += Chat_Yell;
+            //Chat.Say += Chat_Say;
+            //Chat.Yell += Chat_Yell;
             Chat.Whisper += Chat_Whisper;
             Chat.Party += Chat_Party;
             Chat.PartyLeader += Chat_Party;
@@ -38,8 +38,8 @@ namespace ChatLogger
 
         public override void OnDisable()
         {
-            Chat.Say -= Chat_Say;
-            Chat.Yell -= Chat_Yell;
+            //Chat.Say -= Chat_Say;
+            //Chat.Yell -= Chat_Yell;
             Chat.Whisper -= Chat_Whisper;
             Chat.Party -= Chat_Party;
             Chat.PartyLeader -= Chat_Party;
@@ -60,6 +60,8 @@ namespace ChatLogger
             if (((string)args.Args[0]).StartsWith("OQ,0Z,")) {
                 return;
             }
+            // This has been commented out due to fear of "lag" during the
+            // lookup. It might come handy one day. We'll see.
             //string friendname = Styx.WoWInternals.Lua.GetReturnVal<string>(string.Format("return BNGetFriendInfoByID({0})", author), 4);
             //string chat_from = string.Format("({0}){1}", author,friendname.ToString());
             PrintChatMessage((string)args.Args[0], (string)args.Args[12].ToString(), "BNet");
